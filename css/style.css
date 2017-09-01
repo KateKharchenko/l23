@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+* {
+  box-sizing: border-box;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+html, body {
+  height: 100%;
+  font-family: Roboto, sans-serif;
+  font-size: 15px; }
+
+.section {
+  text-align: center; }
+  .section__title {
+    font-size: 60px; }
+    .section__title--sm {
+      font-size: 28px; }
+  .section__subtitle {
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 18px; }
+    .section__subtitle--sm {
+      width: 100%;
+      font-size: 15px; }
+  .section__img {
+    width: 40%; }
+
+.item {
+  height: 250px;
+  overflow: hidden;
+  position: relative; }
+  .item__img {
+    min-width: 100%; }
+  .item__overlay {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #00ff00; }
+    .item__overlay-text {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      left: 20px;
+      text-align: right;
+      font-size: 32px;
+      color: #fff;
+      border-right: 2px solid #fff;
+      padding-right: 10px; }
+      .item__overlay-text:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 40px;
+        display: block;
+        border-bottom: 2px solid #fff; }
+    .item__overlay--gradient {
+      opacity: 1;
+      background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent); }
+  .item:hover .item__overlay {
+    opacity: 1; }
+  .item:hover .item__overlay--gradient {
+    background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent); }
+
+.popup {
+  display: inline-block;
+  padding: 5px 15px;
+  background: #fff;
+  color: #333;
+  border: 3px solid #333;
+  border-radius: 8px;
+  margin-bottom: 100px;
+  position: relative; }
+  .popup:before, .popup:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    display: block;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #333; }
+  .popup:after {
+    content: '';
+    border: 5px solid transparent;
+    border-bottom-color: #fff;
+    top: -10px; }
